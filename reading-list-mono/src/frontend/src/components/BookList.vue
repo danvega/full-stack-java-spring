@@ -4,7 +4,7 @@ import { onMounted, ref } from 'vue';
 const books = ref([]);
 
 onMounted(() => {
-  fetch('http://localhost:8080/api/books')
+  fetch('/api/books')
     .then(response => response.json())
     .then(data => {
       books.value = data;
